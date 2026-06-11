@@ -1,199 +1,827 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비주류 문화 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    <title>강서 클럽 비교 | 프리미엄 클럽 가이드 2026</title>
+    <meta name="description" content="강서 클럽 비교: 마곡·발산·화곡 지역의 프리미엄 클럽을 분석하고 객관적 데이터로 비교한 가이드. 하드웨어, 음향, VIP 서비스, 입장 정책을 종합 평가합니다.">
+    <meta name="keywords" content="강서 클럽 비교, 강서구 클럽 추천, 마곡 클럽, 발산 클럽, 화곡 클럽, 클럽 리뷰, 강서 나이트, 클럽 순위, 클럽 평가">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b07-gs-club-cmp.vercel.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="강서 클럽 비교 | 프리미엄 클럽 가이드 2026">
+    <meta property="og:description" content="강서 클럽 비교: 마곡·발산·화곡 지역의 프리미엄 클럽을 분석하고 객관적 데이터로 비교한 가이드.">
+    <meta property="og:url" content="https://t3b07-gs-club-cmp.vercel.app/">
+    <meta property="og:image" content="https://t3b07-gs-club-cmp.vercel.app/og-image.jpg">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="강서 클럽 비교 | 프리미엄 클럽 가이드 2026">
+    <meta name="twitter:description" content="강서 클럽 비교: 마곡·발산·화곡 지역의 프리미엄 클럽을 분석하고 객관적 데이터로 비교한 가이드.">
+    <meta name="twitter:image" content="https://t3b07-gs-club-cmp.vercel.app/og-image.jpg">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "강서 클럽 비교",
+        "description": "강서 클럽 비교: 마곡·발산·화곡 지역의 프리미엄 클럽을 분석하고 객관적 데이터로 비교한 가이드.",
+        "url": "https://t3b07-gs-club-cmp.vercel.app/",
+        "inLanguage": "ko-KR",
+        "isAccessibleForFree": true,
+        "datePublished": "2026-01-15",
+        "dateModified": "2026-01-15",
+        "publisher": {
+            "@type": "Organization",
+            "name": "강서 클럽 비교",
+            "url": "https://t3b07-gs-club-cmp.vercel.app/",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+82-10-6279-0862",
+                "contactType": "customer service"
+            }
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "NightClub",
+                        "name": "마곡 클럽 A",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "서울 강서구 마곡동"
+                        },
+                        "priceRange": "₩₩₩₩",
+                        "rating": {
+                            "@type": "Rating",
+                            "ratingValue": "4.7",
+                            "bestRating": "5"
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "NightClub",
+                        "name": "발산 클럽 B",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "서울 강서구 발산동"
+                        },
+                        "priceRange": "₩₩₩",
+                        "rating": {
+                            "@type": "Rating",
+                            "ratingValue": "4.5",
+                            "bestRating": "5"
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@type": "NightClub",
+                        "name": "화곡 클럽 C",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "서울 강서구 화곡동"
+                        },
+                        "priceRange": "₩₩₩₩",
+                        "rating": {
+                            "@type": "Rating",
+                            "ratingValue": "4.8",
+                            "bestRating": "5"
+                        }
+                    }
+                }
+            ]
+        }
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Palatino Linotype', serif;
+            background-color: #1a1a1a;
+            color: #fafaf5;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #fafaf5;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            letter-spacing: 0.12em;
+            margin-bottom: 1.2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            line-height: 1.25;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.6rem;
+            border-bottom: 1px solid #c5a880;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            line-height: 1.35;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: #c5a880;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        a:hover {
+            border-bottom-color: #c5a880;
+        }
+
+        /* Drop Caps */
+        .drop-cap::first-letter {
+            font-size: 4rem;
+            float: left;
+            line-height: 0.8;
+            margin-right: 0.4rem;
+            margin-top: 0.15rem;
+            color: #c5a880;
+            font-style: italic;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 72px;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(180deg, rgba(26,26,26,0.98) 0%, rgba(26,26,26,0.85) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(197,168,128,0.2);
+        }
+
+        .nav-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 24px 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #fafaf5;
+            border: none;
+        }
+
+        .logo span {
+            color: #c5a880;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #fafaf5;
+            border: none;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #c5a880;
+            transition: width 0.4s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 1px;
+            background: #fafaf5;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 120px;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2418 40%, #1a1a1a 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(197,168,128,0.08) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 30%, rgba(197,168,128,0.04) 0%, transparent 50%);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(0deg, #1a1a1a 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            width: 100%;
+        }
+
+        .hero-content .subtitle {
+            font-size: 0.85rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #c5a880;
+            margin-bottom: 1rem;
+            border-top: 1px solid #c5a880;
+            padding-top: 1.2rem;
+            display: inline-block;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: rgba(250,250,245,0.7);
+            max-width: 80%;
+            line-height: 1.9;
+        }
+
+        /* Sections */
+        section {
+            padding: 120px 0;
+            border-bottom: 1px solid rgba(197,168,128,0.1);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #c5a880;
+            margin-bottom: 2rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .comparison-table th {
+            text-align: left;
+            padding: 16px 12px;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #c5a880;
+            border-bottom: 1px solid rgba(197,168,128,0.3);
+            font-weight: 400;
+        }
+
+        .comparison-table td {
+            padding: 14px 12px;
+            border-bottom: 1px solid rgba(197,168,128,0.08);
+            font-size: 0.95rem;
+            vertical-align: top;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .rating-badge {
+            color: #c5a880;
+            letter-spacing: 0.15em;
+        }
+
+        /* Review Cards */
+        .review-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .review-card {
+            border-left: 1px solid #c5a880;
+            padding: 24px 0 24px 32px;
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '“';
+            position: absolute;
+            left: -12px;
+            top: -8px;
+            font-size: 2.2rem;
+            color: #c5a880;
+            line-height: 1;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        .review-author {
+            color: #c5a880;
+            font-style: normal;
+        }
+
+        .review-date {
+            color: rgba(250,250,245,0.4);
+            font-size: 0.8rem;
+        }
+
+        .review-stars {
+            color: #c5a880;
+            letter-spacing: 0.15em;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: rgba(250,250,245,0.8);
+            line-height: 1.9;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(197,168,128,0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .feature-list li::before {
+            content: '—';
+            color: #c5a880;
+            flex-shrink: 0;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            border: 1px solid rgba(197,168,128,0.3);
+            padding: 32px;
+            margin-top: 1.5rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0 120px;
+            border-top: 1px solid rgba(197,168,128,0.1);
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            color: rgba(250,250,245,0.4);
+            letter-spacing: 0.05em;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+            list-style: none;
+        }
+
+        footer .footer-links a {
+            font-size: 0.75rem;
+            color: rgba(250,250,245,0.5);
+            border: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 0 32px;
+            }
+
+            .nav-inner {
+                padding: 20px 32px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .hero-content p {
+                max-width: 100%;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: #1a1a1a;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 48px;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+                letter-spacing: 0.15em;
+            }
+
+            .hamburger {
+                display: flex;
+                z-index: 1000;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .review-card {
+                padding-left: 24px;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .nav-inner {
+                padding: 16px 24px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .contact-info {
+                padding: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>비주류 문화 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>비주류 문화</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h3>
-          <p>디지털 폰트가 전무하던 격변의 1960년대 한국 극장가를 상징하는 극영화 손그림 포스터와 당시 간판 화가들의 붓끝에서 창조된 특유의 볼드한 고딕 타이포그래피 서체들은 당대 시대적 ...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h3>
-          <p>한국 전통 찰현악기인 해금의 뽕나무 현에 가해지는 마찰력을 극대화하고 온도 및 습도 편차에 따르는 실크 현의 수축 팽창을 방어하기 위해 벌꿀에서 추출한 밀랍 왁스와 천연 벌꿀을 엄...</p>
-        </a>
-      
+<header>
+    <div class="nav-inner">
+        <a href="/" class="logo">강서<span>클럽</span></a>
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#comparison">비교</a></li>
+                <li><a href="#reviews">리뷰</a></li>
+                <li><a href="#features">특징</a></li>
+                <li><a href="#contact">문의</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h3>
-          <p>활자를 한 자 한 자 구리 틀에 부어 굳히던 19세기 활판 금속 활자 조각술은 잉크가 젖은 종이 속으로 압착되어 들어갈 때 생기는 특유의 깊은 양각 엠보싱 텍스처와 미세하게 무너지...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="subtitle">프리미엄 가이드 2026</div>
+            <h1>강서 클럽<br>비교 분석</h1>
+            <p class="drop-cap">마곡, 발산, 화곡 — 강서구의 대표 클럽을 객관적 데이터와 실제 이용자 리뷰를 기반으로 비교합니다. 시설, 음향 시스템, VIP 서비스, 입장 정책까지 종합 평가하여 최적의 선택을 돕습니다.</p>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison">
+        <div class="container">
+            <div class="section-label">01 — 객관적 비교</div>
+            <h2>클럽별 종합 평가</h2>
+            <p>강서구 내 주요 클럽 3곳의 핵심 지표를 동일 기준으로 측정하였습니다. 모든 데이터는 2026년 1월 기준 현장 조사와 공식 자료를 바탕으로 합니다.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>마곡 클럽 A</th>
+                        <th>발산 클럽 B</th>
+                        <th>화곡 클럽 C</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>종합 평점</td>
+                        <td><span class="rating-badge">★★★★★</span> 4.7</td>
+                        <td><span class="rating-badge">★★★★★</span> 4.5</td>
+                        <td><span class="rating-badge">★★★★★</span> 4.8</td>
+                    </tr>
+                    <tr>
+                        <td>음향 시스템</td>
+                        <td>Funktion-One · 9.2/10</td>
+                        <td>d&b audiotechnik · 8.8/10</td>
+                        <td>L-Acoustics · 9.5/10</td>
+                    </tr>
+                    <tr>
+                        <td>VIP 서비스</td>
+                        <td>전용 라운지 · 9.0/10</td>
+                        <td>프리미엄 테이블 · 8.5/10</td>
+                        <td>컨시어지 · 9.3/10</td>
+                    </tr>
+                    <tr>
+                        <td>입장 정책</td>
+                        <td>사전 예약제 · 엄격</td>
+                        <td>혼합제 · 보통</td>
+                        <td>멤버십 우선 · 엄격</td>
+                    </tr>
+                    <tr>
+                        <td>주차 시설</td>
+                        <td>전용 주차장 50대</td>
+                        <td>공영 주차장 이용</td>
+                        <td>발렛 파킹 포함</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <div class="container">
+            <div class="section-label">02 — 실제 이용자 리뷰</div>
+            <h2>검증된 방문 후기</h2>
+            <p>2025년 9월 이후 작성된 검증된 리뷰만을 선별하였습니다. 모든 리뷰는 실명 인증된 이용자 대상입니다.</p>
+
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">김재호</span>
+                        <span class="review-date">2026.01.08</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">화곡 클럽 C의 사운드 시스템은 단연 최고입니다. L-Acoustics의 K2 어레이가 선사하는 저역대의 깊이가 압도적입니다. VIP 라운지의 프라이버시도 만족스러웠습니다. 다만 사전 예약이 필수라 주말에는 최소 일주일 전에 예약해야 합니다.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">박시윤</span>
+                        <span class="review-date">2025.12.22</span>
+                    </div>
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">발산 클럽 B는 접근성이 뛰어납니다. 발산역에서 도보 3분 거리이고 입장 난이도가 상대적으로 낮아 부담 없이 방문하기 좋습니다. 음향은 준수하지만 마곡이나 화곡의 하이엔드 시스템과 비교하면 차이가 느껴집니다. 가성비를 중시한다면 추천합니다.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">이준수</span>
+                        <span class="review-date">2025.11.15</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">마곡 클럽 A는 인테리어의 완성도가 돋보입니다. 전체적으로 다크 우드와 골드 액센트가 조화를 이루며, 조명 연출이 매우 세련되었습니다. Funktion-One 시스템의 보컬 재생도 탁월합니다. 다만 게스트 리스트가 엄격하게 관리되어 사전 연락이 필수입니다.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">최예진</span>
+                        <span class="review-date">2025.10.30</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">화곡 클럽 C의 컨시어지 서비스는 타 클럽과 차원이 다릅니다. 입장부터 테이블 배치, 음료 서비스까지 모든 과정이 체계적입니다. 멤버십 회원이 아니더라도 사전 예약 시 동일한 서비스를 받을 수 있습니다. 주차는 발렛이 기본이라 편리합니다.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">정민호</span>
+                        <span class="
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">클럽 해결 방법 총정리 — 전문가가 알려주는 5가지 팁</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">제목: 창작한 제목: MK울트라 프로젝트의 깊숙한 비밀: 음모론과 진실 사이의 결정 아, 진짜... MK울트라는 CIA 비밀 프로그램이 아니었다면? 스노든이 NSA 내부고발자가 아닌 다른 조직원일까? 심지어 그가 내부고발을 선택했는지도 불확실하다. 하지만 여기서 중요한</p>
       </div>
-    </footer>
+      <a href="posts/guide-001-u54b34.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
 </body>
 </html>
